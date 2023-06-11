@@ -4,6 +4,7 @@ import { upvoteCountStore } from "../stores/upvote"
 const MAX_COUNT = 50;
 
 export const UpvoteContent = () => {
+
   const upvoteCount = useStore(upvoteCountStore);
 
 
@@ -11,7 +12,7 @@ export const UpvoteContent = () => {
     <div className="m-2 flex items-center rounded-md border border-slate-600 p-2">
       <button
         onClick={() => {
-          upvoteCountStore.set(upvoteCount + 1);
+          (upvoteCount < MAX_COUNT) &&upvoteCountStore.set(upvoteCount + 1);
         }}
         className="h-[80px] w-[80px] rounded-full border border-gray-500 bg-slate-900 p-4 text-center text-sm text-green-600 hover:scale-90 active:bg-slate-800"
       >
