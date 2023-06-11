@@ -29,3 +29,5 @@ All commands are run from the root of the project, from a terminal:
   git checkout main # checkout
   npm run start  # run the app
 ```
+
+`git clone https://github.com/understanding-astro/astro-islands-visual-example.git`
